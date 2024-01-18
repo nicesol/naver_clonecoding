@@ -81,27 +81,38 @@ practice clonecoding
         }
         #wrap-center {
             width: 1200px;
-            background-color: orangered;
+            background-color: rgb(94, 245, 107);
             display: inline-block;
         }
         #header {
             text-align: left;
+            position: relative;
         }
         #header-hamburger {
             display: inline-block;
-            margin-top: 18px;
+            position: absolute;
+            top: 18px;
+            left: -10px;
             padding: 10px;
             background: none;
             border: none;
             cursor: pointer;
         }
-        #header-hamburger:hover {
+        #header-hamburger:hover::before {
+            position: absolute;
+            content: '';
+            left: 1px;
+            top: 1px;
+            width: 44px;
+            height: 44px;
             background-color: var(--color_option_bg);
             border-radius: 50%;
         }
         #header-hamburger > div{
             width: 26px;
             height: 26px;
+            position: relative;
+            z-index: 0;
             background-image: url(./sp_main.png);
             background-position: 0px -333px;
             background-repeat: no-repeat;
